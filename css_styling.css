@@ -1,0 +1,204 @@
+/* 
+  Created on 10th March 2024
+  Last Modified Oct 2024
+  @author Paula Farebrother
+*/
+
+/* for scroll to top button */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* alternative colour set when user hovers over a link */ 
+a:hover {    
+  color: rgb(220, 44, 191);
+}
+
+/* text colour of a link changes once clicked on*/ 
+a:visited {
+  color: red;
+}
+
+/* text colour when user hover over a visited link */
+a:visited:hover {
+  color: rgb(220, 44, 191)
+}
+
+/* formats first lower level headings (h2) */
+.sub-heading {
+  background-image: linear-gradient(white, rgb(178, 153, 171));
+  font-size: 20px;
+}
+
+/* formats second lower level headings (h3) */
+.sub-sub-heading {
+  background-color: rgb(178, 153, 171);
+  margin: 20px 30px 20px 30px;
+  font-size: 30px;
+}
+
+/* standard content format */
+div.content {
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+/* positioning footer below content */
+.footer-end {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  background-color: #d7cbd7;
+  color: rgb(56, 59, 61);
+  border: double 4px white;
+}
+
+/* Return to top of page button (www.youtube.com, n.d.b) */
+.topbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #781d78;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  border: solid 4px rgb(209, 163, 205);
+}
+
+/* HOME PAGE SPECIFIC */
+
+/* formats introductory paragraph */
+div.introduction-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+}
+
+/* formats quotes */
+blockquote {
+  text-align: center;
+  background-color: aliceblue;
+  border: 3px double blue;
+  padding: 25px;
+  border: solid 2px darkgrey;
+}
+
+#ref-link {
+  font-size: 12px;
+}
+
+/* format article layout */
+article {    
+  margin-left: 20px;
+}
+
+/* format individual articles */
+div.links-to-articles {
+  margin: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/*  Position the tooltip */
+div.links-to-articles::before,
+div.links-to-articles::after {
+  --scale: 0;
+ 
+  position: absolute;  
+    top: -.28rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+    transition: 100ms transform;
+    transform-origin: bottom center;
+}
+  
+/* Create and format the tooltip */
+div.links-to-articles::before {
+  content: attr(data-tooltip);
+  text-align: center;
+  padding: .5rem;
+  border-radius: .3rem;
+  width: max-content;
+  max-width: 100%;
+  background: #333;
+  color: white;
+}
+  
+/* return tooltip to full size on hover */
+div.links-to-articles:hover::before,
+div.links-to-articles:hover::after {
+  --scale: 1;
+}
+
+/* outline figures */
+figure {
+  border: 2px solid rgb(62, 13, 82);
+}
+
+/* formats figure caption information */
+figcaption {
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: aliceblue;
+  border: 2px solid rgb(62, 13, 82);
+  margin-left: 80px;
+  padding: 15px;
+  width: 60%;
+  text-align: center;
+}
+
+/* adjusting top of figure to match other */
+figure.figure-two {
+  margin-top: 75px;
+}
+
+/* adjusting top of figure caption to match other */
+figcaption.fig2 {
+  margin-top: 50px;
+}
+
+/* PROFILE PAGE SPECIFIC */
+
+.compHeader {
+  background-color: #a289b6;
+  padding: 5px;
+  text-align: center;
+}
+
+.biReg {
+  font-size: 15px;
+}
+
+.biSignIn {
+  font-size: 15px;
+}
+
+.bi {
+  font-size: 150px;
+}
+
+/* PROFILE VIEWING PAGE */
+#upvote-button {
+  font-size: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  color: yellow;
+}
+
+.voted {
+  color: rgb(39, 99, 60);
+}
+
